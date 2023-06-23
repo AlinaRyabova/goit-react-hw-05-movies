@@ -59,7 +59,7 @@ const MovieDetails = () => {
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : '	https://www.kinofilms.ua/ukr/movie/687355/?photo=751821&g=m687355_5.jpg'
+              : 'https://ichef.bbci.co.uk/news/640/cpsprodpb/C7CA/production/_104864115_b1fef570-1bdf-441d-9724-3a72e5d46e91.jpg'
           }
           alt={original_title}
         />
