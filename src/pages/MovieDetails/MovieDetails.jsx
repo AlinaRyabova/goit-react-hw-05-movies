@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/MovieApi';
 import Loader from 'components/Loader/Loader';
-import {
-  Container,
-  List,
-  ListInfo,
-  LinkInfo,
-  Button,
-} from './MovieDetails.styled';
+import { Container, List, ListInfo, LinkInfo } from './MovieDetails.styled';
+// import styled from 'styled-components';
+// import { Link as RouterLink } from 'react-router-dom';
+
+// const StyledLink = styled(RouterLink)`
+//   text-decoration: none;
+//   font-weight: 600;
+//   font-size: 18px;
+//   color: #5a0341;
+// `;
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -48,8 +51,16 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={location.state?.from ?? '/'}>
-        <Button type="button">Go back</Button>
+      <Link
+        to={location.state?.from ?? '/'}
+        style={{
+          textDecoration: 'none',
+          fontWeight: 600,
+          fontSize: '18px',
+          color: '#5a0341',
+        }}
+      >
+        Go back
       </Link>
       {loading && <Loader />}
 
